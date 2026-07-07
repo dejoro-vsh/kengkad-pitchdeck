@@ -139,20 +139,20 @@ class: px-12 text-center
 
 <p class="text-[#94A3B8] mb-10">มูลค่าตลาดซอฟต์แวร์และการจัดการธุรกรรมในประเทศไทย (Tech Spend Only)</p>
 
-<div class="relative w-full max-w-3xl mx-auto">
+<div class="relative w-full max-w-3xl mx-auto flex flex-col">
   <div v-click class="p-6 rounded-t-3xl bg-[#1E293B] border-t border-x border-[#334155] shadow-2xl backdrop-blur-md">
     <div class="text-[#38BDF8] text-sm font-bold tracking-widest uppercase">Total Market (TAM)</div>
     <div class="text-4xl font-black text-white my-2">6,600 ล้านบาท / ปี</div>
     <div class="text-sm text-[#94A3B8]">550,000 ร้านอาหาร & โรงแรม SME</div>
   </div>
   
-  <div v-click class="p-6 mx-4 bg-[#0F172A] border-x border-[#334155] shadow-2xl backdrop-blur-md">
+  <div v-click class="p-6 bg-[#0F172A] border-x border-[#334155] shadow-2xl backdrop-blur-md">
     <div class="text-cyan-300 text-sm font-bold tracking-widest uppercase">Serviceable Market (SAM)</div>
     <div class="text-3xl font-black text-white my-2">1,320 ล้านบาท / ปี</div>
     <div class="text-sm text-[#94A3B8]">110,000 ราย ที่เป็นกลุ่ม Premium & High-Volume</div>
   </div>
   
-  <div v-click class="p-8 mx-8 rounded-b-3xl bg-gradient-to-b from-[#38BDF8] to-blue-800 border border-[#38BDF8] shadow-[0_15px_40px_rgba(56,189,248,0.3)] backdrop-blur-md">
+  <div v-click class="p-8 rounded-b-3xl bg-gradient-to-b from-[#38BDF8] to-blue-800 border border-[#38BDF8] shadow-[0_15px_40px_rgba(56,189,248,0.3)] backdrop-blur-md">
     <div class="text-blue-100 text-sm font-bold tracking-widest uppercase">3-Year Goal (SOM)</div>
     <div class="text-5xl font-black text-white my-2">39.6 ล้านบาท ARR</div>
     <div class="text-sm text-blue-100 font-medium">ยึดครอง 3% ของ SAM = 3,300 ราย ใน 36 เดือน</div>
