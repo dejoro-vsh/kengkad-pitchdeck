@@ -9,6 +9,7 @@ transition: fade-out
 colorSchema: dark
 css: unocss
 title: KengKad Enterprise Pitch Deck
+routerMode: hash
 fonts:
   sans: 'Prompt'
   serif: 'Prompt'
