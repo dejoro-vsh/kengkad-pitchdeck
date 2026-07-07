@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "slidev pitchdeck.md",
-    "build": "slidev build pitchdeck.md",
+    "build": "slidev build pitchdeck.md --base /pitchdeck/ --out dist/pitchdeck && cp index.html card.html dist/",
     "export": "slidev export pitchdeck.md"
   },
   "dependencies": {
