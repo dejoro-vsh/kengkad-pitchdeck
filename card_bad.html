@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vishnu Somkidsmer - KengKad</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap');
+        :root {
+            --bg-main: #0B1120;
+            --bg-card: #1E293B;
+            --primary: #38BDF8;
+            --text-light: #F8FAFC;
+            --text-muted: #94A3B8;
+        }
+        body {
+            font-family: 'Prompt', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-main);
+            color: var(--text-light);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .card-container {
+            background: var(--bg-card);
+            width: 90%;
+            max-width: 400px;
+            border-radius: 16px;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            border: 1px solid #334155;
+        }
+        
+        /* อัปเดตส่วนแสดงผลรูปภาพ */
+        .profile-img-wrapper {
+            width: 130px;
+            height: 130px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            border: 3px solid var(--primary);
+            box-shadow: 0 10px 25px rgba(56, 189, 248, 0.3);
+            overflow: hidden;
+            background-color: #0F172A;
+        }
+        .profile-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+        }
+
+        h1 { margin: 0; font-size: 1.5rem; color: var(--text-light); }
+        .title { color: var(--primary); font-size: 0.9rem; margin-top: 5px; font-weight: 600; }
+        .company { color: var(--text-muted); font-size: 0.85rem; margin-bottom: 30px; }
+        
+        .contact-info {
+            text-align: left;
+            background: #0F172A;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+        }
+        .contact-item {
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+        .contact-item:last-child { margin-bottom: 0; }
+        .contact-label { color: var(--text-muted); font-size: 0.75rem; display: block; }
+        .contact-value { color: var(--text-light); font-weight: 400; }
+
+        .btn-save {
+            background: var(--primary);
+            color: #0F172A;
+            border: none;
+            width: 100%;
+            padding: 15px;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            font-family: inherit;
+            cursor: pointer;
+            transition: transform 0.2s, background 0.3s;
+        }
+        .btn-save:hover { background: #0EA5E9; }
+        .btn-save:active { transform: scale(0.98); }
+    </style>
+</head>
+<body>
+
+    <div class="card-container">
+        <!-- เรียกใช้รูปภาพ profile.jpg -->
+        <div class="profile-img-wrapper">
+            <img src="profile.jpg" alt="Vishnu Somkidsmer - KengKad Architect">
+        </div>
+        
+        <h1>Vishnu Somkidsmer</h1>
+        <div class="title">Head of Software Team / Senior Architect</div>
+        <div class="company">KengKad (Enterprise Solutions)</div>
+
+        <div class="contact-info">
+            <div class="contact-item">
+                <span class="contact-label">Email</span>
+                <span class="contact-value">vishnu@kengkad.com</span>
+            </div>
+            <div class="contact-item">
+                <span class="contact-label">Website</span>
+                <span class="contact-value">www.kengkad.com</span>
+            </div>
+        </div>
+
+        <button class="btn-save" onclick="downloadVCard()">บันทึกผู้ติดต่อ (Save Contact)</button>
+    </div>
+
+    <script>
+        function downloadVCard() {
+            // *** อย่าลืมแก้ไขเบอร์โทรศัพท์ของคุณที่บรรทัดนี้ ***
+            const phone = "0800000000"; 
+            
+            const vcard = `BEGIN:VCARD
+VERSION:3.0
+FN:Vishnu Somkidsmer (Nu)
+ORG:KengKad
+TITLE:Head of Software Team / Senior Architect
+TEL;TYPE=WORK,VOICE:${phone}
+EMAIL;TYPE=PREF,INTERNET:vishnu@kengkad.com
+URL:https://www.kengkad.com
+END:VCARD`;
+
+            const blob = new Blob([vcard], { type: "text/vcard" });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = "Vishnu_KengKad.vcf";
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+    </script>
+
+</body>
+</html>

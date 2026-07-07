@@ -1,0 +1,14 @@
+{
+  "name": "kengkad-pitchdeck",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "slidev pitchdeck.md",
+    "build": "slidev build pitchdeck.md",
+    "export": "slidev export pitchdeck.md"
+  },
+  "dependencies": {
+    "@slidev/cli": "^0.48.0",
+    "@slidev/theme-seriph": "^0.2.0"
+  }
+}

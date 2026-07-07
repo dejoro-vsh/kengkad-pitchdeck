@@ -1,0 +1,123 @@
+import base64
+with open("f:/antigravity/kengkad/profile.jpg", "rb") as f:
+    b64 = base64.b64encode(f.read()).decode("utf-8")
+
+html = """<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vishnu (Nu) - KengKad Business Card</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4">
+
+    <div class="w-full max-w-md mx-auto relative mt-10">
+        <div class="glass-panel rounded-3xl p-8 pt-16 shadow-2xl text-center relative mt-12">
+            
+            <!-- Profile Avatar -->
+            <div class="absolute -top-16 left-1/2 transform -translate-x-1/2">
+                <div class="w-32 h-32 rounded-full border-4 border-slate-900 bg-slate-800 flex items-center justify-center shadow-lg overflow-hidden">
+                    <img src="data:image/jpeg;base64,__BASE64_IMAGE_PLACEHOLDER__" alt="Vishnu Somkidsmer" class="w-full h-full object-cover object-top">
+                </div>
+            </div>
+
+            <!-- Name & Title -->
+            <h1 class="text-3xl font-bold mb-1 mt-4">Vishnu Somkidsmer</h1>
+            <p class="text-sky-400 font-medium mb-1">Head of Software Team</p>
+            <p class="text-slate-400 text-sm mb-6">Senior Infrastructure Architect @ <span class="font-bold text-white tracking-wider">KengKad</span></p>
+
+            <!-- Value Proposition -->
+            <div class="bg-slate-800/50 rounded-xl p-4 mb-6 border border-slate-700">
+                <p class="text-sm text-slate-300 leading-relaxed italic">
+                    "Building production-grade systems that optimize infrastructure, streamline payments, and drive business revenue."
+                </p>
+            </div>
+
+            <!-- Expertise Tags -->
+            <div class="flex flex-wrap justify-center gap-2 mb-8">
+                <span class="px-3 py-1 bg-slate-800 rounded-full text-xs font-semibold text-slate-300 border border-slate-700">Enterprise Infra</span>
+                <span class="px-3 py-1 bg-slate-800 rounded-full text-xs font-semibold text-slate-300 border border-slate-700">POS & Payment</span>
+                <span class="px-3 py-1 bg-slate-800 rounded-full text-xs font-semibold text-slate-300 border border-slate-700">DevSecOps</span>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="space-y-3 mb-8">
+                <a id="btn-phone" href="#" class="flex items-center justify-center w-full bg-sky-500 hover:bg-sky-600 text-white font-semibold py-3 px-4 rounded-xl transition duration-200">
+                    <i class="fa-solid fa-phone mr-2"></i> โทรติดต่อทันที
+                </a>
+                <a id="btn-line" href="#" target="_blank" class="flex items-center justify-center w-full bg-[#00B900] hover:bg-[#009900] text-white font-semibold py-3 px-4 rounded-xl transition duration-200">
+                    <i class="fa-brands fa-line mr-2"></i> แอด LINE
+                </a>
+            </div>
+
+            <!-- QR Code Section (vCard) -->
+            <div class="border-t border-slate-700 pt-6">
+                <p class="text-sm font-semibold text-sky-400 mb-2">สแกนเพื่อบันทึกลงรายชื่อติดต่อทันที</p>
+                <p class="text-xs text-slate-400 mb-4">(Scan to save contact)</p>
+                <div class="bg-white p-3 rounded-xl inline-block shadow-lg">
+                    <img id="qr-code" src="" alt="vCard QR Code" class="w-36 h-36">
+                </div>
+            </div>
+
+        </div>
+        <p class="text-center text-slate-500 text-xs mt-6 mb-8">
+            © 2026 KengKad. Production-Grade Systems Only. <br>
+            <a href="https://kengkad.com" class="text-sky-500 hover:underline">www.kengkad.com</a>
+        </p>
+    </div>
+
+    <!-- SCRIPT FOR DYNAMIC DATA -->
+    <script>
+        // ==========================================
+        // ⚠️ คุณนุ แก้ไขข้อมูลของคุณตรงนี้ได้เลยครับ ⚠️
+        // ==========================================
+        const myName = "Vishnu (Nu) Somkidsmer";
+        const myCompany = "KengKad";
+        const myTitle = "Head of Software / System Architect";
+        
+        // 1. ใส่เบอร์โทรศัพท์ของคุณ (เช่น "0812345678")
+        const myPhone = "0821945351"; 
+        
+        // 2. ใส่ LINE ID ของคุณ (หากไม่มีเว้นว่างไว้)
+        const myLineID = "REd0SOY1_a"; 
+        
+        // 3. ใส่อีเมลของคุณ (อัปเดตเป็นโดเมนใหม่แล้ว)
+        const myEmail = "vishnu@kengkad.com"; 
+        // ==========================================
+
+        // สร้างข้อมูล vCard
+        const vcardData = `BEGIN:VCARD\\nVERSION:3.0\\nFN:${myName}\\nORG:${myCompany}\\nTITLE:${myTitle}\\nTEL;TYPE=WORK,CELL:${myPhone}\\nEMAIL;TYPE=PREF,INTERNET:${myEmail}\\nURL:https://kengkad.com\\nEND:VCARD`;
+
+        // สร้าง QR Code จาก vCard
+        const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(vcardData)}&margin=0`;
+        document.getElementById('qr-code').src = qrUrl;
+
+        // อัปเดตลิงก์ปุ่มกดต่างๆ
+        document.getElementById('btn-phone').href = `tel:${myPhone}`;
+        
+        // ถ้าใช้ LINE ID แบบปกติ
+        document.getElementById('btn-line').href = `https://line.me/ti/p/~${myLineID}`;
+    </script>
+</body>
+</html>"""
+
+html = html.replace("__BASE64_IMAGE_PLACEHOLDER__", b64)
+
+with open("f:/antigravity/kengkad/card.html", "w", encoding="utf-8") as f:
+    f.write(html)
