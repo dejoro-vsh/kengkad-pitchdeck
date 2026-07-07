@@ -201,7 +201,7 @@ layout: default
 class: px-12 py-10
 ---
 
-# <span class="text-[#38BDF8]">Why KengKad Wins?</span>
+# Why <span class="text-white">Keng</span><span class="text-[#38BDF8]">Kad</span> Wins?
 
 <p class="text-[#94A3B8] mb-8">เปรียบเทียบ Business Value กับตลาดปัจจุบัน</p>
 
@@ -211,7 +211,7 @@ class: px-12 py-10
       <tr class="bg-[#1E293B] text-slate-300">
         <th class="p-4 font-bold border-b border-[#334155] w-1/4">คุณสมบัติ</th>
         <th class="p-4 font-bold border-b border-[#334155] w-1/3">แพลตฟอร์มทั่วไป</th>
-        <th class="p-4 font-bold border-b border-[#334155] text-[#38BDF8] bg-[#38BDF8]/10 w-5/12">KengKad Engine</th>
+        <th class="p-4 font-bold border-b border-[#334155] text-[#38BDF8] bg-[#38BDF8]/10 w-5/12"><span class="text-white">Keng</span><span class="text-[#38BDF8]">Kad</span> Engine</th>
       </tr>
     </thead>
     <tbody class="text-sm">
@@ -245,7 +245,7 @@ layout: center
 class: px-12 text-center
 ---
 
-# <span class="text-[#38BDF8]">The KengKad Task Force</span>
+# The <span class="text-white">Keng</span><span class="text-[#38BDF8]">Kad</span> Task Force
 
 <p class="text-[#94A3B8] mb-12">ทีมนักรบโปรดักชันที่ส่งมอบงานได้จริง (10+ Years Experience)</p>
 
