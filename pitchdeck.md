@@ -1,6 +1,6 @@
 ---
 theme: seriph
-class: text-center
+class: text-center hero-bg flex flex-col justify-center items-center
 highlighter: shiki
 lineNumbers: false
 drawings:
@@ -26,11 +26,6 @@ fonts:
     color: #F8FAFC;
   }
 </style>
-
-<!-- Slide 1 -->
----
-class: text-center hero-bg flex flex-col justify-center items-center
----
 
 # <span class="text-white">Keng</span><span class="text-[#38BDF8]">Kad</span>
 
