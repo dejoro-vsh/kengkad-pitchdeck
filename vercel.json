@@ -1,5 +1,21 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "cleanUrls": true
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "pitchdeck.kengkad.com"
+        }
+      ],
+      "destination": "/pitchdeck/$1"
+    },
+    {
+      "source": "/pitchdeck",
+      "destination": "/pitchdeck/index.html"
+    }
+  ]
 }
