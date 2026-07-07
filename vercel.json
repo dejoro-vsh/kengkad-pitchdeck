@@ -11,11 +11,11 @@
           "value": "pitchdeck.kengkad.com"
         }
       ],
-      "destination": "/pitchdeck.html"
+      "destination": "/pitchdeck"
     },
     {
       "source": "/",
-      "destination": "/landing.html"
+      "destination": "/landing"
     }
   ]
 }
